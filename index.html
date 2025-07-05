@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balaharipreetha's Selected Task Logs</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 font-sans">
+  <header class="bg-teal-500 text-white py-6">
+    <div class="container mx-auto text-center">
+      <h1 class="text-3xl font-bold">Balaharipreetha's Selected Task Logs</h1>
+      <p class="mt-2 text-lg">A few notes on projects I’ve worked on</p>
+    </div>
+  </header>
+
+  <main class="container mx-auto py-8 max-w-4xl">
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold text-center mb-6">Hey, that’s me!</h2>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        I’m Balaharipreetha, and this is my little corner to log some of the projects I am tinkering with.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold text-center mb-6">My Task Logs</h2>
+      <p class="text-lg text-gray-700 text-center mb-6">
+        As of 7/5/2025 I am deciding to log the everyday progress of the project that I am working on. The goal is hold my myself accountable for the task and monitor the progress
+      </p>
+      <div class="space-y-6">
+        <!-- Task Log 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h3 class="text-xl font-semibold mb-2"></h3>
+          <p class="text-gray-600 mb-4"></p>
+          <title>Publish the Automatic Key Rotation and Notification into Azure Marketplace</title>
+          <p><b>Plan:</b>
+            1. Setup event grid and capture the near key expiry event.
+            2. Trigger Logic App on near key expiry event.
+            3. Logic app would rotate the key and send out Notification
+            4. Capture these in bicep.
+            5. Publish to Azure Marketplace
+         </p>
+        </div>
+        
+    </section>
+  </main>
+
+  <footer class="bg-gray-700 text-white py-4">
+    <div class="container mx-auto text-center">
+      <p>© 2025 Balaharipreetha. Just my little logbook.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Optional: Add smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
