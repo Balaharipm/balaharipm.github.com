@@ -10,37 +10,43 @@
   <header class="bg-teal-500 text-white py-6">
     <div class="container mx-auto text-center">
       <h1 class="text-3xl font-bold">Balaharipreetha's Selected Task Logs</h1>
-      <p class="mt-2 text-lg">A few notes on projects I’m currently working on</p>
+      <p class="mt-2 text-lg">A few notes on projects I'm currently working on</p>
     </div>
   </header>
 
   <main class="container mx-auto py-8 max-w-4xl">
     <section class="mb-12">
-      <h2 class="text-2xl font-semibold text-center mb-6">Hey, that’s me!</h2>
+      <h2 class="text-2xl font-semibold text-center mb-6">Hey, that's me!</h2>
       <p class="text-lg text-gray-700 leading-relaxed">
-        I’m Balaharipreetha, and this is my little corner to log the projects I’m tinkering with. As of July 5, 2025, I’m starting to track my progress to hold myself accountable and celebrate how far I’m going.
+        I'm Balaharipreetha, and this is my little corner to log the projects I'm tinkering with. As of July 5, 2025, I'm starting to track my progress to hold myself accountable and celebrate how far I'm going.
       </p>
     </section>
 
     <section class="mb-12">
       <h2 class="text-2xl font-semibold text-center mb-6">My Task Logs</h2>
       <p class="text-lg text-gray-700 text-center mb-6">
-        As of July 5, 2025, I’m logging the progress of my current project to keep myself on track. More logs to come as I keep building!
+        As of July 5, 2025, I'm logging the progress of my current project to keep myself on track. More logs to come as I keep building!
       </p>
       <div class="space-y-6">
         <!-- Task Log 1 -->
         <div class="bg-white p-6 rounded-lg shadow-sm">
           <h3 class="text-xl font-semibold mb-2">Log 1: Publish Automated Key Rotation and Notification to Azure Marketplace</h3>
-          <p class="text-gray-600 mb-4">I’m working on a script to automate key rotation for secure access, with notifications to keep everyone updated. It’s exciting to start this and plan out how it’ll end up on the Azure Marketplace!</p>
+          <p class="text-gray-600 mb-4">I'm working on a script to automate key rotation for resources in Azure and update the secret in keyvault, with notifications to keep everyone updated. It's exciting to start this and plan out how it'll end up on the Azure Marketplace!</p>
           <p><b>Plan:</b></p>
           <ol class="list-decimal list-inside text-gray-600 mb-4">
-            <li>Setup event grid and capture the near key expiry event.</li>
-            <li>Trigger Logic App on near key expiry event.</li>
-            <li>Logic app would rotate the key and send out notification.</li>
-            <li>Capture these in Bicep.</li>
-            <li>Publish to Azure Marketplace.</li>
+            <li>Key Vault Event Trigger: Use Azure Key Vault to emit a "near expiry" event for a secret or key.</li>
+            <li>Event grid setup: Near expiry event captured by event grid></li>
+            <li>Logic App: On near expiry event perform following tasks
+              <ul class="list-disc list-inside ml-6 mt-2">
+                <li>Key Rotation in Azure Resource: Rotate the key in another Azure service (e.g., Azure Open AI, Cosmos DB).</li>
+                <li>Update Key Vault: Store the new key as the secret in Key Vault.</li>
+                <li>Notifications: Send notifications via Logic App when the rotation occurs.</li>
+              </ul>
+            </li>
+            <li>Bicep Deployment: Capture the infrastructure in Bicep for reproducibility.</li>
+            <li>Azure Marketplace: Package and publish the solution.</li>
           </ol>
-          <span class="text-teal-500">Still in progress, but I’m working on it!</span>
+          <span class="text-teal-500">Still in progress, but I'm working on it!</span>
         </div>
       </div>
     </section>
